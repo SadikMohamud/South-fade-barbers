@@ -91,11 +91,15 @@ body {
   border-bottom: var(--border-glass);
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 0 0 24px 24px;
+
 }
 
 .header.scrolled {
   padding: 0.5rem 2rem;
-  box-shadow: var(--shadow);
+   box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+  background: rgba(20, 20, 20, 0.65); /* Slightly less transparent when scrolled */
+  backdrop-filter: blur(28px) saturate(200%);
 }
 
 .nav-container {
@@ -170,11 +174,12 @@ body {
   top: 70px;
   left: 0;
   width: 100%;
-  background: rgba(10, 10, 10, 0.98);
-  backdrop-filter: blur(20px);
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(24px) saturate(180%);
   padding: 2rem;
-  border-bottom: var(--border-glass);
+  border-bottom: 1.5px solid rgba(255,255,255,0.18);
   z-index: 999;
+  border-radius: 0 0 24px 24px;
 }
 
 .mobile-nav.show {
@@ -847,10 +852,10 @@ body {
   <!-- Hero Section -->
   <section class="hero section" id="hero">
     <div class="hero-carousel" id="heroCarousel">
-      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1600181951985-cc1f107a9f5d?auto=format&fit=crop&w=1500&q=80')"></div>
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=1500&q=80')"></div>
-      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1595526116170-bb31a94440e0?auto=format&fit=crop&w=1500&q=80')"></div>
-    </div>
+  <div class="hero-slide active" style="background-image: url('./chairs.jpg')"></div>
+  <div class="hero-slide" style="background-image: url('./child-seat.jpg')"></div>
+  
+</div>
     
     <div class="hero-content">
       <h1 class="hero-title">Welcome to SFB</h1>
@@ -873,7 +878,7 @@ body {
     
     <div class="about-content">
       <div class="about-text">
-        <p>At South Fade Barbers, we believe that a great haircut is more than just a service—it's an experience. Our master barbers combine traditional techniques with contemporary styles to deliver cuts that reflect your unique personality.</p>
+        <p>At South Fade Barbers, we believe that a great haircut is more than just a service, it's an experience. Our master barbers combine traditional techniques with contemporary styles to deliver cuts that reflect your unique personality.</p>
         
         <p>Since opening our doors, we've been committed to providing exceptional service in a comfortable, welcoming environment. Every client leaves feeling confident and looking their absolute best.</p>
         
@@ -928,7 +933,7 @@ body {
           </div>
           <div>
             <strong>Address</strong><br>
-             70 Balham road
+            123 Main Street, City, State 12345
           </div>
         </div>
         
@@ -938,7 +943,7 @@ body {
           </div>
           <div>
             <strong>Phone</strong><br>
-            02087771234
+            (555) 123-4567
           </div>
         </div>
         
@@ -1050,10 +1055,9 @@ body {
         title: 'Classic Fade',
         description: 'Our signature fade cuts blend traditional barbering with modern techniques for a clean, sharp look.',
         prices: [
-          { name: 'Low Fade', price: '$35' },
-          { name: 'Mid Fade', price: '$40' },
-          { name: 'High Fade', price: '$45' },
-          { name: 'Skin Fade', price: '$50' }
+          { name: 'Buzz cut Fade', price: '£24' },
+          { name: 'Skin Fade', price: '£27' },
+          { name: 'Complimentary wash with every haircut',price: 'Free' }
         ]
       },
       {
@@ -1062,9 +1066,10 @@ body {
         title: 'Scissor Cut',
         description: 'Precision scissor work for those who prefer a more natural, textured finish with versatile styling options.',
         prices: [
-          { name: 'Basic Cut', price: '$30' },
-          { name: 'Style Cut', price: '$40' },
-          { name: 'Wash & Cut', price: '$45' }
+          { name: 'Basic Cut', price: '£30' },
+          { name: 'Style Cut', price: '£40' },
+          { name: 'Wash & Cut', price: '£45' },
+          { name: 'Complimentary wash with every haircut',price: 'Free' }
         ]
       },
       {
@@ -1073,9 +1078,10 @@ body {
         title: 'Beard Trim',
         description: 'Expert beard grooming and shaping to complement your facial structure and personal style.',
         prices: [
-          { name: 'Beard Trim', price: '$25' },
-          { name: 'Beard Shape', price: '$30' },
-          { name: 'Full Beard Service', price: '$40' }
+          { name: 'Beard Trim', price: '£25' },
+          { name: 'Beard Shape', price: '£30' },
+          { name: 'Full Beard Service', price: '£40' },
+          { name: 'Complimentary wash with every haircut',price: 'Free' }
         ]
       },
       {
@@ -1084,9 +1090,10 @@ body {
         title: 'Hot Towel Shave',
         description: 'Traditional wet shave experience with hot towels, premium products, and meticulous attention to detail.',
         prices: [
-          { name: 'Classic Shave', price: '$45' },
-          { name: 'Royal Treatment', price: '$65' },
-          { name: 'Full Service', price: '$85' }
+          { name: 'Classic Shave', price: '£45' },
+          { name: 'Royal Treatment', price: '£65' },
+          { name: 'Full Service', price: '£85' },
+          { name: 'Complimentary wash with every haircut',price: 'Free' }
         ]
       },
       {
@@ -1095,20 +1102,21 @@ body {
         title: 'Kids Cut',
         description: 'Gentle, patient service for our youngest clients with fun, age-appropriate styles.',
         prices: [
-          { name: 'Kids Cut (Under 12)', price: '$25' },
-          { name: 'Teen Cut (13-17)', price: '$30' }
+          { name: 'Kids Cut (Under 12)', price: '£20' },
+          { name: 'Student Cut (13-17)', price: '£23' },
+          { name: 'Complimentary wash with every haircut',price: 'Free' }
         ]
       },
-      {
-        id: 6,
-        icon: 'fas fa-crown',
-        title: 'Premium Package',
-        description: 'The complete grooming experience including cut, beard trim, hot towel treatment, and styling.',
-        prices: [
-          { name: 'The Works', price: '$95' },
-          { name: 'Executive Package', price: '$120' }
-        ]
-      }
+     {
+  id: 6,
+  icon: 'fas fa-user-graduate',
+  title: 'O.A.P Haircut',
+  description: 'Specially priced haircut service for our valued senior clients (O.A.P). Enjoy a classic cut in comfort and style.',
+  prices: [
+    { name: 'O.A.P Haircut', price: '£22' },
+    { name: 'Complimentary wash with every haircut',price: 'Free' }
+  ]
+}
     ];
 
     // Utility Functions
