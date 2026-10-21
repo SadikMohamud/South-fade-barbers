@@ -1,6 +1,6 @@
 # South Fade Barbers (v2)
 
-Website for South Fade Barbershop, 5 Cavendish Parade, London SW4 9DW. Live at https://sadikmohamud.github.io/south-fade-barbers/ (the south-fade.com domain has lapsed; to restore it, renew the domain and add a CNAME file containing south-fade.com).
+Website for South Fade Barbershop, 5 Cavendish Parade, London SW4 9DW. Live at https://sadikmohamud.github.io/South-fade-barbers/ (the south-fade.com domain has lapsed; to restore it, renew the domain and add a CNAME file containing south-fade.com).
 
 ## What's in v2
 - Hero with a hexagon light ceiling, inspired by the shop's own hex LED lights, that glows under the cursor
